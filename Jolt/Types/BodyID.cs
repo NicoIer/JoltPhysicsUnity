@@ -8,6 +8,8 @@ namespace Jolt
     {
         public uint Value;
 
+        public uint ID => Value;
+
         #region IEquatable
 
         public bool Equals(BodyID other)

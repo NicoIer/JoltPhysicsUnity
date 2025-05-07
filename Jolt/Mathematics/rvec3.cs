@@ -41,6 +41,11 @@ namespace Jolt
             return *((rvec3*) &vec);
         }
 
+        public static implicit operator rvec3(System.Numerics.Vector3 vec)
+        {
+            return new rvec3(vec.X, vec.Y, vec.Z);
+        }
+
         public static rvec3 one => new rvec3(1f, 1f, 1f);
 
 #else

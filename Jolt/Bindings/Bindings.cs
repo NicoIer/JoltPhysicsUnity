@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using Jolt.Native;
 using UnityEngine;
 
 [assembly: InternalsVisibleTo("Jolt.Tests")]
@@ -11,6 +12,7 @@ namespace Jolt
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         internal static void Initialize()
         {
+            NativeLibrary.LoadLibrary();
             InitializeBodyActivationListeners();
             InitializeContactListeners();
         }
