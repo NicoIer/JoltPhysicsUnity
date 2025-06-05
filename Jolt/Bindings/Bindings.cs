@@ -12,7 +12,6 @@ namespace Jolt
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         internal static void Initialize()
         {
-            NativeLibrary.LoadLibrary();
             InitializeBodyActivationListeners();
             InitializeContactListeners();
         }
