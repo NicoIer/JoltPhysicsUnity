@@ -32,7 +32,7 @@ namespace Jolt
         public void OptimizeBroadPhase() => Bindings.JPH_PhysicsSystem_OptimizeBroadPhase(Handle);
 
         public BodyInterface BodyInterface => GetBodyInterface();
-        public BodyInterface GetBodyInterface() => new BodyInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyInterface(Handle) };
+        public readonly BodyInterface GetBodyInterface() => new BodyInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyInterface(Handle) };
         
         public BodyInterface GetBodyInterfaceNoLock() => new BodyInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyInterfaceNoLock(Handle) };
         

@@ -10,6 +10,21 @@ namespace Jolt
 
         public uint ID => Value;
 
+        public BodyID(uint value)
+        {
+            Value = value;
+        }
+        
+        public static implicit operator uint(BodyID id)
+        {
+            return id.Value;
+        }
+
+        public static implicit operator BodyID(uint id)
+        {
+            return new BodyID { Value = id };
+        }
+
         #region IEquatable
 
         public bool Equals(BodyID other)
