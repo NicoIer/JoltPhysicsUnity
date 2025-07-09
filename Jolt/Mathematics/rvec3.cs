@@ -46,9 +46,19 @@ namespace Jolt
             return new rvec3(vec.X, vec.Y, vec.Z);
         }
         
+        public static implicit operator System.Numerics.Vector3(rvec3 vec)
+        {
+            return new System.Numerics.Vector3(vec.x, vec.y, vec.z);
+        }
+        
         public static implicit operator rvec3(UnityEngine.Vector3 vec)
         {
             return new rvec3(vec.x, vec.y, vec.z);
+        }
+        
+        public static implicit operator UnityEngine.Vector3(rvec3 vec)
+        {
+            return new UnityEngine.Vector3(vec.x, vec.y, vec.z);
         }
 
         public static rvec3 one => new rvec3(1f, 1f, 1f);
