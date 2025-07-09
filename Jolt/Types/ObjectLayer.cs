@@ -36,6 +36,11 @@ namespace Jolt
         {
             return new ObjectLayer(layer);
         }
+        
+        public static implicit operator uint(ObjectLayer layer)
+        {
+            return layer.Value;
+        }
 
         #region IEquatable
 

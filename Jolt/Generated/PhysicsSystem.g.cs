@@ -56,10 +56,22 @@ namespace Jolt
         
         public uint GetNumConstraints() => Bindings.JPH_PhysicsSystem_GetNumConstraints(Handle);
         
-        public void SetGravity(float3 gravity) => Bindings.JPH_PhysicsSystem_SetGravity(Handle, gravity);
+        public readonly void SetGravity(float3 gravity) => Bindings.JPH_PhysicsSystem_SetGravity(Handle, gravity);
         
         public float3 GetGravity() => Bindings.JPH_PhysicsSystem_GetGravity(Handle);
-        
+
+        public float3 gravity
+        {
+            get
+            {
+                return Bindings.JPH_PhysicsSystem_GetGravity(Handle);
+            }
+            set
+            {
+                Bindings.JPH_PhysicsSystem_SetGravity(Handle, gravity);
+            }
+        }
+
         public void AddConstraint(Constraint constraint) => Bindings.JPH_PhysicsSystem_AddConstraint(Handle, constraint.Handle);
         
         public void RemoveConstraint(Constraint constraint) => Bindings.JPH_PhysicsSystem_RemoveConstraint(Handle, constraint.Handle);
