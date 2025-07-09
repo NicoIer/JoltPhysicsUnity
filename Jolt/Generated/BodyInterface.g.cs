@@ -59,7 +59,7 @@ namespace Jolt
         
         public bool IsAdded(BodyID bodyID) => Bindings.JPH_BodyInterface_IsAdded(Handle, bodyID);
         
-        public bool GetBodyType(BodyID bodyID) => Bindings.JPH_BodyInterface_GetBodyType(Handle, bodyID);
+        public BodyType GetBodyType(BodyID bodyID) => Bindings.JPH_BodyInterface_GetBodyType(Handle, bodyID);
         
         public void SetLinearVelocity(BodyID bodyID, float3 velocity) => Bindings.JPH_BodyInterface_SetLinearVelocity(Handle, bodyID, velocity);
         
