@@ -5,6 +5,8 @@ using UnityEngine;
 
 [assembly: InternalsVisibleTo("Jolt.Tests")]
 
+[assembly: InternalsVisibleTo("JoltWrapper")]
+
 namespace Jolt
 {
     internal static partial class Bindings
