@@ -8,13 +8,7 @@ namespace Jolt
     public partial struct JobSystem : IDisposable
     {
         internal NativeHandle<JPH_JobSystem> Handle;
-        
-        
-        public JobSystem(JobSystemThreadPoolConfig config = default)
-        {
-           Handle = JPH_JobSystemThreadPool_Create(config);
-        }
-        
+
         /// <summary>
         /// Allocate a new native JobSystem from a thead pool config. Pass default to use the max threads available.
         /// </summary>
