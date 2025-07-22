@@ -36,7 +36,7 @@ namespace Jolt
         
         public BodyInterface GetBodyInterfaceNoLock() => new BodyInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyInterfaceNoLock(Handle) };
         
-        public BodyLockInterface GetBodyLockInterface() => new BodyLockInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyLockInterface(Handle) };
+        public readonly BodyLockInterface GetBodyLockInterface() => new BodyLockInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyLockInterface(Handle) };
         
         public BodyLockInterface GetBodyLockInterfaceNoLock() => new BodyLockInterface { Handle = Bindings.JPH_PhysicsSystem_GetBodyLockInterfaceNoLock(Handle) };
         
