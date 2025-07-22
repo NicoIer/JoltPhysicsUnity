@@ -6,6 +6,11 @@ namespace Jolt
     public partial struct CapsuleShape
     {
         internal NativeHandle<JPH_CapsuleShape> Handle;
+
+        public CapsuleShape(float halfHeightOfCylinder, float radius)
+        {
+            Handle = JPH_CapsuleShape_Create(halfHeightOfCylinder, radius);
+        }
         
         public static CapsuleShape Create(float halfHeightOfCylinder, float radius)
         {
